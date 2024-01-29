@@ -11,7 +11,7 @@ services:
       - "5432:5432"
 
   spring-app:
-    image: docker-backend:0.0.1-SNAPSHOT 
+    build: ../
     ports:
       - "4000:4000"
     depends_on:
