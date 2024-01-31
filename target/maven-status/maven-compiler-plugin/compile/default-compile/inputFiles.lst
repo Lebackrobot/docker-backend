@@ -1,0 +1,4 @@
+/home/umpreto/Developments/docker-backend/src/main/java/com/api/dockerbackend/domain/MessageRepository.java
+/home/umpreto/Developments/docker-backend/src/main/java/com/api/dockerbackend/domain/Message.java
+/home/umpreto/Developments/docker-backend/src/main/java/com/api/dockerbackend/DockerBackendApplication.java
+/home/umpreto/Developments/docker-backend/src/main/java/com/api/dockerbackend/controllers/MessageController.java
