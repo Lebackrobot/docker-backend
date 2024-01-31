@@ -1,1 +1,0 @@
-INSERT INTO message (description) Values ('Eu ❤️ Docker!')
