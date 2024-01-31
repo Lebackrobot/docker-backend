@@ -1,0 +1,30 @@
+version: "3.1"
+
+networks:
+  bridge:
+    driver: bridge
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - bridge
+
+  spring-app:
+    build: ../
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: jdbc:postgresql://db:5432/postgres
+      DATABASE_USER: postgres
+      DATABASE_PASSWORD: postgres 
+    networks:
+      - bridge

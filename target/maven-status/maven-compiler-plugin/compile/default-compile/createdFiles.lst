@@ -1,0 +1,4 @@
+com/api/dockerbackend/domain/MessageRepository.class
+com/api/dockerbackend/DockerBackendApplication.class
+com/api/dockerbackend/controllers/MessageController.class
+com/api/dockerbackend/domain/Message.class
