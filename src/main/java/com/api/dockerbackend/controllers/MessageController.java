@@ -18,13 +18,13 @@ public class MessageController {
     @Autowired
     private MessageRepository repository; 
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "https://docker-frontend-kd1h.onrender.com/")
     @GetMapping
     public ResponseEntity getAll() {
         return ResponseEntity.ok(repository.findAll());
     }
 
-    @CrossOrigin(origins = "*")
+    @CrossOrigin(origins = "https://docker-frontend-kd1h.onrender.com/")
     @GetMapping("{id}") 
     public ResponseEntity getById(@PathVariable int id) {
         var message = repository.findById(id);
