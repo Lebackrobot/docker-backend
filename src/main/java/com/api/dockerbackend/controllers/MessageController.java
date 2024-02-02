@@ -12,19 +12,18 @@ import org.springframework.web.bind.annotation.RestController;
 import com.api.dockerbackend.domain.MessageRepository;
 
 @RestController
+@CrossOrigin(origins = "*")
 @RequestMapping("/message")
 public class MessageController {
     
     @Autowired
     private MessageRepository repository; 
 
-    @CrossOrigin(origins = "*")
     @GetMapping
     public ResponseEntity getAll() {
         return ResponseEntity.ok(repository.findAll());
     }
 
-    @CrossOrigin(origins = "*")
     @GetMapping("{id}") 
     public ResponseEntity getById(@PathVariable int id) {
         var message = repository.findById(id);
